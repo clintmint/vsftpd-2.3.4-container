@@ -9,7 +9,7 @@ The official source release of 2.3.4 (above link) doesn't have the vulnerable ba
 
 However I did find another Github user's repo with the infected version: https://github.com/nikdubois/vsftpd-2.3.4-infected/commit/e084c9543947d9509ea74731adca427418604cc2 which I've incorporated into `str.c` and `sysdeputil.c` in order to make it exploitable using msf. 
 
-Other changes are made to source to make it build with the Alpine C library, ![musl](https://en.m.wikipedia.org/wiki/Musl), in the Dockerfile during container image build.
+Other changes are made to source to make it build with the Alpine C library, [musl](https://en.m.wikipedia.org/wiki/Musl), in the Dockerfile during container image build.
 
 ## Use my published image from docker hub
 
