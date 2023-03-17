@@ -32,7 +32,7 @@ exploit
 ## Multi-architecture build and push for linux/amd64 (Intel/AMD CPUs) and linux/arm64 (for Macs using M1 chip)
 
 ```
-docker buildx create --use
 docker login
+docker buildx create --use
 docker buildx build --platform linux/amd64,linux/arm64 --push -t <docker-hub-username>/vsftpd-2.3.4:1.0 . --no-cache
 ```
